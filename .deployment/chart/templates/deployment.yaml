@@ -1,0 +1,39 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+      {{- if .Values.podAnnotations }}
+      annotations:
+{{ toYaml .Values.podAnnotations | indent 8 }}
+      {{- end }}
+    spec:
+      containers:
+      - name: {{ .Values.name }}
+        image: {{ .Values.Image.repository }}/{{ .Values.Image.name }}:{{ .Values.Image.tag }}
+        imagePullPolicy: {{ .Values.Image.pullPolicy }}
+        env:
+        - name: MONGODB_CONNECTION_STRING
+          value: {{ .Values.MONGODB_CONNECTION_STRING | quote }}
+        - name: HTTP_ADDRESS
+          value: {{ .Values.HTTP_ADDRESS | quote }}
+        - name: HTTP_PORT
+          value: {{ .Values.HTTP_PORT | quote }}
+        - name: MONGODB_DATABASE
+          value: {{ .Values.MONGODB_DATABASE | quote }}
+        ports:
+        - name: schema-registry
+          containerPort: {{ .Values.HTTP_PORT }}
+        resources:
+{{ toYaml .Values.resources | indent 10 }}

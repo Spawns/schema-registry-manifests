@@ -1,0 +1,40 @@
+Image:
+  repository: localhost:5000
+  name: dep-schema-reg
+  tag: "1.0.0"
+  pullPolicy: Always
+  
+BaseImage:
+  repository: localhost:5000
+  name: java-jre
+  tag: "1.0.0"
+  
+replicaCount: 1
+
+MONGODB_HOST: dep-mongodb.default:27017
+MONGODB_CONNECTION_STRING: mongodb://dataplatform-admin:adminsecretpw@dep-mongodb.default:27017/dataplatform
+HTTP_ADDRESS: 0.0.0.0
+HTTP_PORT: 8543
+MONGODB_DATABASE: dataplatform
+
+name: schema-registry
+namespace: default
+IngressDomain: lvh.me
+
+resources:
+  # limits is the limit of a particular resource
+  limits:
+    # memory is the memory limit requested
+    memory: 1500Mi
+    # cpu is the CPU limit requested
+    cpu: 0.5
+  # requests is the request of a particular resource
+  requests:
+    # memory is how much memory is requested
+    memory: 1500Mi
+    # cpu is how much CPU is requested
+    cpu: 0.2
+
+podAnnotations: {
+  kubernetes-auth-vault-operator-approle-name: "schema-registry"
+}

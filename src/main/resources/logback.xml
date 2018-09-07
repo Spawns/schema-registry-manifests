@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <!--<pattern>%date{MM/dd HH:mm:ss} %-6level[%logger{0}]: %msg%n</pattern>-->
+            <pattern>%-6level%d{HH:mm:ss.SSS}[%logger{0}]: %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="akka.event.slf4j" level="INFO" />
+    <logger name="org.apache" level="INFO" />
+    <logger name="akka" level="DEBUG" />
+    <logger name="spray" level="INFO" />
+    <logger name="org.mongodb.driver.cluster" level="INFO" />
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

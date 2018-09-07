@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "dep-mongodb"
+  namespace: "default"
+spec:
+  template:
+    spec:
+      containers:
+        - name: "dep-mongodb"
+          image: "{{ .Values.Image.repository }}/sumup-mongodb:{{ .Values.Image.tag }}"
+          command: 
+            - mongo
+          args: 
+            - {{ .Values.MONGODB_HOST | quote }}
+            - "--eval"
+            - "db = db.getSiblingDB('{{ .Values.MONGODB_DATABASE }}'); db.createUser({user: 'dataplatform-admin', pwd: 'adminsecretpw', roles:[{role: 'readWrite', db: '{{ .Values.MONGODB_DATABASE }}'}]}); db.schemas.createIndex({ name: 1, major_version: 1, minor_version: 1 }, { unique:true }); db.consumers.createIndex({ name: 1, schemaId: 1 }, { unique:true })"
+      restartPolicy: OnFailure

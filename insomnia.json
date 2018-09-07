@@ -1,0 +1,916 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-08-29T18:46:09.441Z",
+	"__export_source": "insomnia.desktop.app:v5.11.5",
+	"resources": [
+		{
+			"_id": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"parentId": null,
+			"modified": 1510305962517,
+			"created": 1510305962517,
+			"name": "Schema-Registry",
+			"description": "",
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_8c8dbe3642ae43af939c61ca3cb3d010",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1510306136611,
+			"created": 1510305962527,
+			"name": "Base Environment",
+			"data": {},
+			"color": null,
+			"isPrivate": false,
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_4572ce3b7fbf4e73857fedc57b361ae2",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1510305962523,
+			"created": 1510305962523,
+			"name": "Default Jar",
+			"cookies": [],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_e1c5964d1ba74bfb99d604646223b6e0",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1510584261551,
+			"created": 1510584261551,
+			"name": "Compatibility",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1510584261551,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_1e07e836609b4370abf821f2e14b1d68",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1511184389779,
+			"created": 1511184389779,
+			"name": "Creation",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1511184389779,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_35584f3712bb42419ec1e472b13b3d4c",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1511184447942,
+			"created": 1511184447942,
+			"name": "Deletion",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1511184447942,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_16fd55f3b33244a9aca6bc34d432d1d8",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1511184460857,
+			"created": 1511184460857,
+			"name": "Reading",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1511184460857,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_c0df1e216be74eef8459d5e1f16ce866",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1511950253160,
+			"created": 1511950243489,
+			"name": "Array",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1511184418860.5,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_abf68f6b250e438f9687404c6cbcf29e",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1512987666444,
+			"created": 1512987666444,
+			"name": "Consumer",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1512987666444,
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_e388d43487b64b5e919dc4020adfb00f",
+			"parentId": "wrk_52b001ad2a1b46d0806387aeda884f8a",
+			"modified": 1511184478565,
+			"created": 1510831490397,
+			"url": "http://{{ app_address_and_host  }}/api-docs/swagger.json",
+			"name": "Swagger Docs",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1510584261501,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "env_113f7ee2284c4f76896447dc2a44dd27",
+			"parentId": "env_8c8dbe3642ae43af939c61ca3cb3d010",
+			"modified": 1535568330674,
+			"created": 1510306014970,
+			"name": "Dev",
+			"data": {
+				"app_address_and_host": "localhost:8543"
+			},
+			"color": "#00e836",
+			"isPrivate": false,
+			"_type": "environment"
+		},
+		{
+			"_id": "req_41767f6f4844479fa727f898702979e5",
+			"parentId": "fld_e1c5964d1ba74bfb99d604646223b6e0",
+			"modified": 1510584335681,
+			"created": 1510568039319,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Exact match",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"bar\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510514713244.25,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_de127426d0d64b0aa07e12b3224e2d4f",
+			"parentId": "fld_e1c5964d1ba74bfb99d604646223b6e0",
+			"modified": 1510587455580,
+			"created": 1510584116026,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Removal",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510514713294.25,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_54a9bb64e58f45c2aa5e18c4021b0d6e",
+			"parentId": "fld_e1c5964d1ba74bfb99d604646223b6e0",
+			"modified": 1510587475530,
+			"created": 1510587459651,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Addition",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"bar\",\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"foobar\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510410390784.125,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_19e6a1f5cfc545168a88fd50b07b7abe",
+			"parentId": "fld_e1c5964d1ba74bfb99d604646223b6e0",
+			"modified": 1510587815871,
+			"created": 1510587807131,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Rename field",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foot\",\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"bar\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510462552014.1875,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_373d71e8e2a943d89dd16546687dc9df",
+			"parentId": "fld_e1c5964d1ba74bfb99d604646223b6e0",
+			"modified": 1510587828301,
+			"created": 1510587821110,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Change type",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"int\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"bar\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510488632629.2188,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_4f9c2c2135184fae888f58d628d378b5",
+			"parentId": "fld_e1c5964d1ba74bfb99d604646223b6e0",
+			"modified": 1510587850037,
+			"created": 1510587841755,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Duplicate field",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"bar\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510501672936.7344,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_0ced54120a4248a887b2e9af2a59d999",
+			"parentId": "fld_e1c5964d1ba74bfb99d604646223b6e0",
+			"modified": 1510609083709,
+			"created": 1510609070590,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Shuffled exact match",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"bar\",\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510508193090.4922,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_9dbffffc778f462cb0eafa8c3fe39baf",
+			"parentId": "fld_1e07e836609b4370abf821f2e14b1d68",
+			"modified": 1511279438428,
+			"created": 1510306281588,
+			"url": "http://{{ app_address_and_host  }}/api/schema/",
+			"name": "Test - Schema",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"bar\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_ba26068a10b5418abe4febb1a1bee4d8"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511096164883.5,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_dfd964e65cbd4b18a2fe2c0b5c8c83fe",
+			"parentId": "fld_1e07e836609b4370abf821f2e14b1d68",
+			"modified": 1511184403839,
+			"created": 1510320595062,
+			"url": "http://{{ app_address_and_host  }}/api/schema",
+			"name": "Invalid Create TestX - Schema",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"testX\",\n\t\"version\": 1,\n\t\"fields\": []\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_ba26068a10b5418abe4febb1a1bee4d8"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511096164933.5,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_53d1547c5a37469294023a3f6f1f8807",
+			"parentId": "fld_1e07e836609b4370abf821f2e14b1d68",
+			"modified": 1511905154143,
+			"created": 1511184488785,
+			"url": "http://{{ app_address_and_host  }}/api/schema/",
+			"name": "Test Array field - Schema",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": \"int\"\n\t\t}\n\t]\n}\n"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_ba26068a10b5418abe4febb1a1bee4d8"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510840213192.25,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_51b8ae2ff53246b890c5f19b15d4e638",
+			"parentId": "fld_1e07e836609b4370abf821f2e14b1d68",
+			"modified": 1511883973534,
+			"created": 1511279440940,
+			"url": "http://{{ app_address_and_host  }}/api/schema/",
+			"name": "Test - Int Schema",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"int\"\n\t\t}\n\t]\n}\n"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_ba26068a10b5418abe4febb1a1bee4d8"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510968189037.875,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_051e98303cde43d59c0f3d807f4b5918",
+			"parentId": "fld_35584f3712bb42419ec1e472b13b3d4c",
+			"modified": 1513347144356,
+			"created": 1510565933390,
+			"url": "http://{{ app_address_and_host  }}/api/schema/test/major_version/1/minor_version/1",
+			"name": "Test - Schema, Version - 1",
+			"description": "",
+			"method": "DELETE",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1510306068199,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_935da98863a7412896eff194d770a1e2",
+			"parentId": "fld_16fd55f3b33244a9aca6bc34d432d1d8",
+			"modified": 1511184472460,
+			"created": 1510306068324,
+			"url": "http://{{ app_address_and_host  }}/api/schemas",
+			"name": "Schemas",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1510306068174,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_23f60b07e8a247cb80db1d43ac2fec26",
+			"parentId": "fld_16fd55f3b33244a9aca6bc34d432d1d8",
+			"modified": 1511184468248,
+			"created": 1510306239341,
+			"url": "http://{{ app_address_and_host  }}/api/schema/test",
+			"name": "Test - Schema",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1510306068199,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_c07374e2aceb4edd81ced87ea8b8742e",
+			"parentId": "fld_16fd55f3b33244a9aca6bc34d432d1d8",
+			"modified": 1513344932899,
+			"created": 1510306258324,
+			"url": "http://{{ app_address_and_host  }}/api/schema/test/major_version/1/minor_version/1",
+			"name": "Test - Schema, Version - 1",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1510306068149,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_961228323b5f44a194c965c27eae197f",
+			"parentId": "fld_16fd55f3b33244a9aca6bc34d432d1d8",
+			"modified": 1511184464836,
+			"created": 1510331154451,
+			"url": "http://{{ app_address_and_host  }}/api/schema/test/NOT_FOUND",
+			"name": "Not Found",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1510306068249,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "fld_65eeb5a3f29449f4889ae165d414376e",
+			"parentId": "fld_c0df1e216be74eef8459d5e1f16ce866",
+			"modified": 1511950288625,
+			"created": 1511950270716,
+			"name": "Compatibility",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1511184404369.75,
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_998d45e1abd84f71abb9f886142e5685",
+			"parentId": "fld_c0df1e216be74eef8459d5e1f16ce866",
+			"modified": 1516376291198,
+			"created": 1511905132823,
+			"url": "http://{{ app_address_and_host  }}/api/schema/",
+			"name": "Test Record field - Schema",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"majorVersion\": 1,\n\t\"minorVersion\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"record\",\n\t\t\t\"fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foo\",\n\t\t\t\t\t\"type\": \"int\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foobar\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}\n"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_ba26068a10b5418abe4febb1a1bee4d8"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511184404319.75,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_18524c521aa249478b48af9850ecafc4",
+			"parentId": "fld_c0df1e216be74eef8459d5e1f16ce866",
+			"modified": 1513346905049,
+			"created": 1513346898916,
+			"url": "http://{{ app_address_and_host  }}/api/schema/",
+			"name": "Test Record field - major version",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"major_version\": 2,\n\t\"minor_version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"record\",\n\t\t\t\"fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foo\",\n\t\t\t\t\t\"type\": \"int\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"barfoo\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_ba26068a10b5418abe4febb1a1bee4d8"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511140284626.625,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_7d3a5297555d4e1a81ad1ce0825000b7",
+			"parentId": "fld_abf68f6b250e438f9687404c6cbcf29e",
+			"modified": 1513337562363,
+			"created": 1512987693005,
+			"url": "http://{{ app_address_and_host  }}/api/consumer",
+			"name": "Register",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test-app\",\n\t\"schemaName\": \"test\",\n\t\"schemaMajorVersion\": 1,\n\t\"schemaMinorVersion\": 1\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_47bcca9107104acab8793fbf99c2785b"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1512987693005,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_6949e55beb254d119d855c401d047ecb",
+			"parentId": "fld_abf68f6b250e438f9687404c6cbcf29e",
+			"modified": 1513337910302,
+			"created": 1512993856955,
+			"url": "http://{{ app_address_and_host  }}/api/consumer/test-app/schema_name/test/schema_major_version/1/schema_minor_version/1",
+			"name": "Get Consumer by Name and Schema",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1512993856955,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_eb4ee24ab9974fae9ae706e85e885f2e",
+			"parentId": "fld_abf68f6b250e438f9687404c6cbcf29e",
+			"modified": 1513006960756,
+			"created": 1512999770713,
+			"url": "http://{{ app_address_and_host  }}/api/consumer/test-app",
+			"name": "Get Consumers by Name",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1512990774980,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_1bc47c321e9a415faac0805749dfb422",
+			"parentId": "fld_abf68f6b250e438f9687404c6cbcf29e",
+			"modified": 1513158702946,
+			"created": 1513158696134,
+			"url": "http://{{ app_address_and_host  }}/api/consumers",
+			"name": "Get Consumers",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1512989233992.5,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_dd7f16c19be3439ba47213671c4fb8fa",
+			"parentId": "fld_65eeb5a3f29449f4889ae165d414376e",
+			"modified": 1515488712207,
+			"created": 1511950270721,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Exact match",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"major_version\": 1,\n\t\"minor_version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"record\",\n\t\t\t\"fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foo\",\n\t\t\t\t\t\"type\": \"int\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foobar\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510514713244.25,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_f63a71553de24ec4a9053c214d4f8661",
+			"parentId": "fld_65eeb5a3f29449f4889ae165d414376e",
+			"modified": 1518000414464,
+			"created": 1511950270724,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Removal",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "[\n\t{\n\t\"name\": \"users/profile/bg\",\n\t\"applicationId\": \"users-app\",\n\t\"majorVersion\": 1,\n\t\"minorVersion\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\tname: users,\n\t\t\ttype: array,\n\t\t\titems: int,\n\t\t},\n\t\t{\n\t\t\t\"name\": \"valuename\",\n\t\t\t\"type\": \"string\"\n\t\t}\n\t]\n},\n\t{\n\t\tid: 123456,\n\t\t\n\t\t\"user\": {\n\t\t\t\"name\": \"potato\"\n\t\t}\t\n\t}\n]\n"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510514713294.25,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_74abdeee83f84dc98c904fb98c3ae433",
+			"parentId": "fld_65eeb5a3f29449f4889ae165d414376e",
+			"modified": 1516376586565,
+			"created": 1511950270726,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Addition",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"majorVersion\": 1,\n\t\"minorVersion\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"record\",\n\t\t\t\"fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foo\",\n\t\t\t\t\t\"type\": \"int\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foobar\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"tacocat\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510410390784.125,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_4aebdc02026d4754a9c6c82980c0be17",
+			"parentId": "fld_65eeb5a3f29449f4889ae165d414376e",
+			"modified": 1511950412980,
+			"created": 1511950270728,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Rename field",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"record\",\n\t\t\t\"fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"fooT\",\n\t\t\t\t\t\"type\": \"int\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foobar\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510462552014.1875,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_d9e0472b9b194c1a93c544fec48fd9fe",
+			"parentId": "fld_65eeb5a3f29449f4889ae165d414376e",
+			"modified": 1511950407660,
+			"created": 1511950270733,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Change type",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"record\",\n\t\t\t\"fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foo\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foobar\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510488632629.2188,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_da209171028c43c59e741acac8426a52",
+			"parentId": "fld_65eeb5a3f29449f4889ae165d414376e",
+			"modified": 1511950394732,
+			"created": 1511950270736,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Duplicate field",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"record\",\n\t\t\t\"fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foo\",\n\t\t\t\t\t\"type\": \"int\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foo\",\n\t\t\t\t\t\"type\": \"int\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foobar\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510501672936.7344,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_e05558ef86af4ca9b3f0715278de7477",
+			"parentId": "fld_65eeb5a3f29449f4889ae165d414376e",
+			"modified": 1511950347830,
+			"created": 1511950270737,
+			"url": "http://{{ app_address_and_host  }}/api/compatibility",
+			"name": "Shuffled exact match",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"test\",\n\t\"version\": 1,\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"foo\",\n\t\t\t\"type\": \"record\",\n\t\t\t\"fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foobar\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"foo\",\n\t\t\t\t\t\"type\": \"int\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_8b6880222e874a7fac96d6f18954351e"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1510508193090.4922,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		}
+	]
+}

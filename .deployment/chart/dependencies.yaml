@@ -1,0 +1,11 @@
+dependencies:
+  build:
+    - name: java-jre
+      version: 1.0.0
+      repository: git@github.com:sumup/dockerfiles.git
+      path: /java-jre/8
+  runtime:
+    - name: sumup-mongodb
+      version: 1.0.0
+      repository: git@github.com:sumup/data-platform.git
+      path: /mongodb
